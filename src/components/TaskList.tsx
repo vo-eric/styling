@@ -59,7 +59,7 @@ function TaskList() {
   };
 
   return (
-    <div className='inline-flex flex-col gap-4 items-center pt-4 w-full'>
+    <div className='inline-flex flex-col gap-4 items-center pt-4 w-full font-[Inter]'>
       {tasks.map((task) => (
         <Task
           task={task}
