@@ -46,16 +46,19 @@ function TaskList() {
 
   //look into passing the whole task list
   const handleClick = (id: number): void => {
-    const taskListCopy = structuredClone(tasks);
-    const task = taskListCopy.find((task) => task.id === id);
+    setTasks((prev: TaskType[]) => {
+      const taskListCopy = structuredClone(prev);
+      const task = taskListCopy.find((task) => task.id === id);
 
-    if (!task) {
-      return;
-    }
+      if (!task) {
+        return taskListCopy;
+      }
+      task.completed = !task.completed;
 
-    task.completed = !task.completed;
-    //add prev
-    setTasks(sortTasksByCompletion(taskListCopy));
+      return sortTasksByCompletion(taskListCopy);
+    });
+
+    return;
   };
 
   return (
