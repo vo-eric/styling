@@ -1,6 +1,6 @@
 import { type Message, type Task, type User } from './types';
-import imageOne from './assets/237f92b8c3fa630880a17b97a1f864fb528f0aa2.png';
-import imageTwo from './assets/48fb0979b0fbdd8e320622de39475b562ddad56d.png';
+import imageOne from './assets/48fb0979b0fbdd8e320622de39475b562ddad56d.png';
+import imageTwo from './assets/237f92b8c3fa630880a17b97a1f864fb528f0aa2.png';
 
 export const TASKS: Task[] = [
   {
