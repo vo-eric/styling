@@ -24,7 +24,7 @@ function Task({ task, handleClick }: TaskProps) {
       </button>
       <div className=''>
         <p className='text-black text-lg'>{task.title}</p>
-        <p className='text-grey-400 text-base'>{task.description}</p>
+        <p className='text-grey-400 text-sm'>{task.description}</p>
       </div>
     </div>
   );
