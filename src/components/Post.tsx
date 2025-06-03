@@ -21,12 +21,12 @@ export interface Post {
 
 function Post() {
   return (
-    <div className='font-[Inter] text-black w-[90%] m-auto pt-7'>
+    <div className='font-[Inter] text-black w-[70%] h-[600px] m-auto p-7'>
       {POSTS.map((post) => {
         return (
           <div className='flex gap-4'>
             <Avatar user={post.author} />
-            <div className='flex flex-col gap-2 '>
+            <div className='flex flex-col gap-6 '>
               <div className='text-grey-300'>
                 <p>
                   <strong className='text-black font-medium'>
