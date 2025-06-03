@@ -1,5 +1,6 @@
 import Task from './Task';
 import { type Task as TaskType } from '../types';
+import { useState } from 'react';
 
 const TASKS: TaskType[] = [
   {
@@ -35,10 +36,23 @@ const TASKS: TaskType[] = [
 ];
 
 function TaskList() {
+  const [tasks, setTasks] = useState<TaskType[]>(TASKS || []);
+
+  const handleClick = (id: number): void => {
+    const taskCopy = structuredClone(tasks);
+    const task = taskCopy[id - 1];
+    task.completed = !task.completed;
+    setTasks(taskCopy);
+  };
+
   return (
     <div className='inline-flex flex-col gap-4 items-center pt-4 w-full'>
-      {TASKS.map((task) => (
-        <Task task={task} key={task.id} />
+      {tasks.map((task) => (
+        <Task
+          task={task}
+          key={task.id}
+          handleClick={() => handleClick(task.id)}
+        />
       ))}
     </div>
   );
