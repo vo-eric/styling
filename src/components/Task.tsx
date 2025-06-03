@@ -16,7 +16,7 @@ function Task({ task, handleClick }: TaskProps) {
         className={clsx(
           'h-[25px] w-[25px] border border-grey-50 rounded-lg transition duration-300',
           {
-            'bg-green-400': task.completed,
+            'bg-green-400 border-none': task.completed,
           }
         )}
       >
