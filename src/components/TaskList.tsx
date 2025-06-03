@@ -39,8 +39,13 @@ function TaskList() {
   const [tasks, setTasks] = useState<TaskType[]>(TASKS || []);
 
   const handleClick = (id: number): void => {
-    const taskCopy = structuredClone(tasks);
-    const task = taskCopy[id - 1];
+    const taskListCopy = structuredClone(tasks);
+    const task = taskListCopy.find((task) => task.id === id);
+
+    if (!task) {
+      return;
+    }
+
     task.completed = !task.completed;
     setTasks(taskCopy);
   };
