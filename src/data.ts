@@ -98,7 +98,7 @@ export const POSTS: Post[] = [
 
 export const createHeatGrid = (): number[] => {
   const heatGrid = new Array(35).fill(null).map(() => {
-    return Math.round(Math.random() * 4) * 100;
+    return Math.ceil(Math.random() * 6) * 100;
   });
 
   return heatGrid;
