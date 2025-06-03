@@ -36,7 +36,7 @@ const TASKS: TaskType[] = [
 
 function TaskList() {
   return (
-    <div>
+    <div className='inline-flex flex-col gap-4 items-center pt-4 w-full'>
       {TASKS.map((task) => (
         <Task task={task} key={task.id} />
       ))}
