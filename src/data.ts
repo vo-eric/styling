@@ -96,21 +96,40 @@ export const POSTS: Post[] = [
   },
 ];
 
-/*
-
-date.setDate(date.getDate() - 3);
-const dateString = date.toISOString()
-
-interface Post {
-  id: string;
-  author: User;
-  createdAt: Date;
-  imageUrl: string;
-  description: string;
-  numberOfLikes: number;
-  comments: Comment[];
-  group: Group;
-}
-
-
-*/
+export const HEAT_GRID = [
+  '#3E5FCC',
+  '#D9E2FA',
+  '#3E5FCC',
+  '#D9D9D9',
+  '#9EB0E5',
+  '#3E5FCC',
+  '#D9D9D9',
+  '#BFCBEE',
+  '#D9D9D9',
+  '#6B85D8',
+  '#BFCBEE',
+  '#D9D9D9',
+  '#BFCBEE',
+  '#9EB0E5',
+  '#D9D9D9',
+  '#9EB0E5',
+  '#D9D9D9',
+  '#BFCBEE',
+  '#9EB0E5',
+  '#D9E2FA',
+  '#D9D9D9',
+  '#BFCBEE',
+  '#BFCBEE',
+  '#9EB0E5',
+  '#D9D9D9',
+  '#3E5FCC',
+  '#BFCBEE',
+  '#3E5FCC',
+  '#3E5FCC',
+  '#D9D9D9',
+  '#3E5FCC',
+  '#6B85D8',
+  '#BFCBEE',
+  '#D9D9D9',
+  '#6B85D8',
+];
