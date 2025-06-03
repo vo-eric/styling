@@ -1,6 +1,8 @@
 import { type Message, type Task, type User } from './types';
 import imageOne from './assets/48fb0979b0fbdd8e320622de39475b562ddad56d.png';
 import imageTwo from './assets/237f92b8c3fa630880a17b97a1f864fb528f0aa2.png';
+import imageThree from './assets/e70883927f135f87cd002a7122bb6b6bd3722bc6.jpg';
+import type { Group, Post } from './components/Post';
 
 export const TASKS: Task[] = [
   {
@@ -70,3 +72,45 @@ export const MESSAGES: Message[] = [
     from: USERS[0],
   },
 ];
+
+const GROUPS: Group[] = [
+  {
+    id: 1,
+    name: 'Fractal Bootcamp',
+  },
+];
+
+const date: Date = new Date();
+
+export const POSTS: Post[] = [
+  {
+    id: 0,
+    author: USERS[0],
+    createdAt: date.setDate(date.getDate() - 3),
+    imageUrl: imageThree,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam aliquet ex. Maecenas quis arcu metus. Nulla facilisi. Sed malesuada dolor sem, et lacinia libero consequat vel. Aenean ac lacinia nulla. Fusce gravida sem non leo eleifend, nec imperdiet magna tincidunt. Proin cursus enim accumsan ante tincidunt consectetur. Proin semper volutpat arcu nec vestibulum. Pellentesque interdum enim sed lacus maximus dapibus. Morbi interdum libero a neque pulvinar, eu molestie erat cursus. Maecenas vestibulum, urna eget lobortis iaculis, nulla ante efficitur nisl, sed dignissim quam turpis at nibh. Donec cursus quam non diam tempus pellentesque nec sed sem. Nullam nunc elit, viverra sed tincidunt pulvinar, accumsan sit amet ipsum. Curabitur nec arcu non enim vestibulum fringilla. Pellentesque eget suscipit quam, sed mollis elit. Suspendisse sit amet blandit neque.',
+    numberOfLikes: 24,
+    numberOfComments: 4,
+    group: GROUPS[0],
+  },
+];
+
+/*
+
+date.setDate(date.getDate() - 3);
+const dateString = date.toISOString()
+
+interface Post {
+  id: string;
+  author: User;
+  createdAt: Date;
+  imageUrl: string;
+  description: string;
+  numberOfLikes: number;
+  comments: Comment[];
+  group: Group;
+}
+
+
+*/
