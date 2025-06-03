@@ -1,10 +1,12 @@
 import './App.css';
-import TaskList from './components/TaskList';
+// import TaskList from './components/TaskList';
+import MessageThread from './components/MessageThread';
 
 function App() {
   return (
     <>
-      <TaskList />
+      {/* <TaskList /> */}
+      <MessageThread />
     </>
   );
 }
