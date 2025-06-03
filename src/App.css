@@ -8,4 +8,14 @@
   --color-green-50: #e2ffe5;
   --color-green-400: #359845;
   --color-blue: #74c2ff;
+  --color-grid-100: #d9d9d9;
+  --color-grid-200: #d9e2fa;
+  --color-grid-300: #bfcbee;
+  --color-grid-400: #9eb0e5;
+  --color-grid-500: #6b85d8;
+  --color-grid-600: #3e5fcc;
+}
+
+@utility grid-cols-7-max {
+  grid-template-columns: repeat(7, minmax(auto, 60px));
 }

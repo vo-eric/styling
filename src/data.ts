@@ -96,21 +96,20 @@ export const POSTS: Post[] = [
   },
 ];
 
-/*
+export const createHeatGrid = (): number[] => {
+  const heatGrid = new Array(35).fill(null).map(() => {
+    return Math.ceil(Math.random() * 6) * 100;
+  });
 
-date.setDate(date.getDate() - 3);
-const dateString = date.toISOString()
+  return heatGrid;
+};
 
-interface Post {
-  id: string;
-  author: User;
-  createdAt: Date;
-  imageUrl: string;
-  description: string;
-  numberOfLikes: number;
-  comments: Comment[];
-  group: Group;
-}
-
-
-*/
+export const DAYS: string[] = [
+  'Mon',
+  'Tues',
+  'Wed',
+  'Thurs',
+  'Fri',
+  'Sat',
+  'Sun',
+];
