@@ -35,9 +35,16 @@ const TASKS: TaskType[] = [
   },
 ];
 
+const sortTasksByCompletion = (tasks: TaskType[]): TaskType[] => {
+  const completedTasks = tasks.filter((task) => task.completed);
+  const uncompletedTasks = tasks.filter((task) => !task.completed);
+  return [...completedTasks, ...uncompletedTasks];
+};
+
 function TaskList() {
   const [tasks, setTasks] = useState<TaskType[]>(TASKS || []);
 
+  //look into passing the whole task list
   const handleClick = (id: number): void => {
     const taskListCopy = structuredClone(tasks);
     const task = taskListCopy.find((task) => task.id === id);
@@ -47,7 +54,8 @@ function TaskList() {
     }
 
     task.completed = !task.completed;
-    setTasks(taskCopy);
+    //add prev
+    setTasks(sortTasksByCompletion(taskListCopy));
   };
 
   return (
